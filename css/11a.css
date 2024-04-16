@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 21px;
+  
+
+}
+h1{
+  margin-block: 13px
+  ;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 520px;
+  margin: auto;
+}
+
+.version1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.todo-grid{
+  flex: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px
+  ;
+
+}
+.to-do-grid {
+  display: grid;
+  max-width: 520px;
+  flex: 1;
+  grid-template-columns: 2fr 2fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+.to-do-grid>*{
+  min-width: 0;
+  overflow: hidden;
+}
+.main {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  column-gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.main>*{
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* main respects the max width while the todo-grid is somehow smaller */
+.input-date,
+.input-list {
+  font-size: 16px;
+  padding: 5px;
+}
+.new-item, .new-date{
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.699);
+  font-size: 16px;
+  padding: 5px;
+}
+.add-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+}
+.delete-button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+
+}
+footer{
+  font-size: 21px;
+  min-height: 21px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .55;
+  text-align: center;
+  transition: font-size .15s;
+  padding: 13px;
+}
+footer:hover{
+  opacity: 1;
+}
+@media(width < 430px  ){
+  .input-date, .input-list{
+    font-size: 13px;
+  }
+  .add-button, .delete-button, .new-item, .new-date{
+    font-size: 13px;
+  }
+}
+@media (width < 400px){
+  footer{
+    font-size: 30%;
+  }
+}

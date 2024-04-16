@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>To Do List</title>
+		<link
+			rel="stylesheet"
+			href="css/11a.css"
+		/>
+	</head>
+	<body>
+		<h1 style="text-align: center">To Do List</h1>
+		<div class="container">
+			<div class="main">
+				<input
+					type="text"
+					class="js-enter-new input-list"
+					placeholder="Bake a pie"
+					onkeydown="
+        onKeyDownEnter(event);
+        "
+				/>
+				<input
+					type="date"
+					class="js-dueDate input-date"
+				/>
+
+				<button
+					class="js-addlist add-button"
+					onclick="addToList();
+				// displayLoop();
+				"
+				>
+					Add
+				</button>
+			</div>
+			<div class="js-display-list todo-grid"></div>
+		</div>
+		<footer>
+		</p>@supersimpledev project - To do list</p>
+		</footer>
+		<script src="javascript/11a.js"></script>
+	</body>
+</html>
